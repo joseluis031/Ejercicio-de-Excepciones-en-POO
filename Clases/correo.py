@@ -9,3 +9,4 @@ class Correoelectronico:
         if re.search("@*.*com*",self.correo):
             print("Bienvenido a la web")
         
+        
