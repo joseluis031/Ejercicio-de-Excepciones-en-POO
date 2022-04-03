@@ -1,10 +1,19 @@
 from Clases.correo import Correoelectronico,re
-try:
-    correo = input("Introduzca su correo para poder iniciar sesion: ")
-    final = Correoelectronico(correo)
-    print(final.search1())
-except:
-    pass
-else:
-    if re.search("@",correo) == None:
-        print("Correo invalido")
+
+
+while True:
+    try:
+        correo = input("Introduzca su correo para poder iniciar sesion: ")
+        final = Correoelectronico(correo) 
+        
+    except:
+        pass
+    else:
+        if re.search("@*.*com*", correo):
+            if correo in final.correos:
+                final.search1()    #aqui llamo a la funcion de la clase si el correo se encuentra en la lista
+            else:
+                print ("Cuenta bloqueada") #si no se encuentra pero tiene "@,.y com" automaticamente se bloquea la cuenta y se cierra el programa
+            break
+        elif re.search("@*.*com*",correo) == None: #mientras que el correo no tenga "@,.y com", el programa seguira pidiendo un correo valido
+            print("Correo invalido")
