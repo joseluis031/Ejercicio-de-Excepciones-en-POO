@@ -6,11 +6,3 @@ class Correoelectronico:
     def search1(self):
         if re.search("@",self.correo):
             print("Bienvenido a la web")
-        elif re.search("@",self.correo) == None:
-            print("Correo invalido")
-
-
-
-correo = input("Introduzca su correo para poder iniciar sesion: ")
-final = Correoelectronico(correo)
-print(final.search1())
