@@ -6,7 +6,7 @@ while True:
         correo = input("Introduzca su correo para poder iniciar sesion: ")
         final = Correoelectronico(correo) 
         if correo in final.correos:
-                final.search1()  #aqui llamo a la funcion de la clase si el correo se encuentra en la lista
+                final.search1() #aqui llamo a la funcion de la clase si el correo se encuentra en la lista
         
     except:
         pass
